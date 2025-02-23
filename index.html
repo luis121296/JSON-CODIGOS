@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repositorio de JSON</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .json-box { border: 1px solid #ccc; margin: 10px 0; padding: 10px; background: #f9f9f9; }
+        button { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Repositorio de JSON</h1>
+    <p>Aquí tienes los códigos JSON que puedes copiar fácilmente.</p>
+
+    <div class="json-box">
+        <button onclick="copyToClipboard('json1')">Copiar JSON 1</button>
+        <pre id="json1" style="white-space: pre-wrap; word-wrap: break-word;">
+        {"c":{"io":[[[15,2],2],[[4],6]],"tz":"CET-1CEST-2,M3.5.0/2,M10.5.0/3","l":2,"i":0,"b":[[4,5]],"ic":[[14,12,100]],"tt":[[50,-1,0],[49,0,0,-1,1]],"50":{"m":[[4],[2]]},"49":{"m":[[3]]}},"a":[{"0":{"r":[[15]]},"1":{"r":[[15,1]]},"b":[[4]],"es":[{"t":75,"cd":2,"n":2,"dt":[0,56],"vf":0.0000382602,"vo":-0.068,"cf":0.0000119088392,"co":-0.017,"pf":0.00768009,"y2":[{"v":-10000,"r":1,"0":{"m":[[7,1],[7,-1]]}},{"v":4200}]},{"t":75,"n":3,"dt":[0,56],"vf":0.0000382602,"vo":-0.068,"cf":0.0000119088392,"co":-0.017,"pf":0.00768009},{"t":95,"h":[2,3,2]},{"t":95,"j":300,"h":[2,2,10]}]},{"t":5},{"h":0,"s":1,"d":10,"0":{"m":[[-1,1]]},"1":{"m":[[-1]]}}]}
+        </pre>
+    </div>
+
+    <div class="json-box">
+        <button onclick="copyToClipboard('json2')">Copiar JSON 2</button>
+        <pre id="json2" style="white-space: pre-wrap; word-wrap: break-word;">
+        {"c":{"io":[[[15,2],2],[[4],6]],"tz":"CET-1CEST-2,M3.5.0/2,M10.5.0/3","l":2,"i":0,"b":[[4,5]],"ic":[[14,12,100]],"tt":[[50,-1,0]],"50":{"m":[[4],[5],[2],[3]]},"49":{"m":[[3]]}},"a":[{"0":{"r":[[15]]},"1":{"r":[[15,1]]},"b":[[4]],"es":[{"t":75,"cd":2,"n":2,"dt":[0,56],"vf":0.0000382602,"vo":-0.068,"cf":0.0000119088392,"co":-0.017,"pf":0.00768009,"y2":[{"v":-10000,"r":1,"0":{"m":[[9,1],[9,-1]]}},{"v":4200}]},{"t":75,"n":3,"dt":[0,56],"vf":0.0000382602,"vo":-0.068,"cf":0.0000119088392,"co":-0.017,"pf":0.00768009},{"t":95,"h":[2,3,2]},{"t":95,"h":[3,3,2]},{"t":95,"j":300,"h":[2,2,4]},{"t":95,"j":300,"h":[3,2,4]}]},{"t":5},{"h":0,"s":1,"i":10,"0":{"m":[[-1,1]]},"1":{"m":[[-1]]}}]}
+        </pre>
+    </div>
+
+    <script>
+        function copyToClipboard(id) {
+            const jsonContent = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(jsonContent)
+                .then(() => {
+                    alert('JSON copiado al portapapeles');
+                })
+                .catch(err => {
+                    console.error('Error al copiar: ', err);
+                });
+        }
+    </script>
+</body>
+</html>
